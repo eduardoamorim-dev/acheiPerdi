@@ -1,0 +1,60 @@
+<!-- templates/list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Itens Perdidos{% endblock %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow-md mb-6">
+    <h1 class="text-2xl font-bold mb-4">Itens Perdidos</h1>
+    <p class="text-gray-600">Encontrou algo? <a href="{% url 'lost_item_register' %}" class="text-blue-600 hover:underline">Cadastre um novo item</a></p>
+</div>
+
+{% if lost_items %}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for item in lost_items %}
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+            <div class="h-48 overflow-hidden">
+                {% if item.image %}
+                <img src="{{ item.image.url }}" alt="{{ item.name }}" class="w-full h-full object-cover">
+                {% else %}
+                <div class="w-full h-full bg-gray-300 flex items-center justify-center">
+                    <span class="text-gray-500">Sem imagem</span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2">{{ item.name }}</h2>
+                <p class="text-gray-600 mb-2"><strong>Local:</strong> {{ item.lost_location }}</p>
+                <p class="text-gray-500 text-sm mb-4">Registrado em: {{ item.created_at|date:"d/m/Y" }}</p>
+                <a href="{% url 'lost_item_detail' item.id %}" class="inline-block bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors w-full text-center">Ver Detalhes</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Paginação -->
+    {% if is_paginated %}
+    <div class="mt-8 flex justify-center">
+        <div class="flex space-x-2">
+            {% if page_obj.has_previous %}
+            <a href="?page=1" class="px-3 py-2 bg-gray-200 rounded-md hover:bg-gray-300">&laquo; Primeira</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Anterior</a>
+            {% endif %}
+
+            <span class="px-3 py-2 bg-blue-600 text-white rounded-md">{{ page_obj.number }} de {{ page_obj.paginator.num_pages }}</span>
+
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}" class="px-3 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Próxima</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}" class="px-3 py-2 bg-gray-200 rounded-md hover:bg-gray-300">Última &raquo;</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+{% else %}
+    <div class="bg-yellow-100 p-6 rounded-lg shadow-md text-center">
+        <p class="text-lg text-yellow-700">Nenhum item perdido cadastrado ainda.</p>
+        <a href="{% url 'lost_item_register' %}" class="inline-block mt-4 bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">Cadastrar Item</a>
+    </div>
+{% endif %}
+{% endblock %}
