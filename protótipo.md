@@ -1,59 +1,56 @@
-# Prototipo da tela home
-![127 0 0 1_8000_](https://github.com/user-attachments/assets/681e3bf0-f338-44bd-91e0-d9d149cb4c30)
+## Link para acessar o prototipo funcional -> 
 
-# Prototipo listagem
-![127 0 0 1_8000_lost-items_](https://github.com/user-attachments/assets/ff5346ad-862c-4963-9d47-d932e23881db)
 
-# Prototipo Cadastrar novo item
-![127 0 0 1_8000_register_](https://github.com/user-attachments/assets/50f88290-b3c6-42bd-ba10-e8316d0359a7)
+![Frame 2](https://github.com/user-attachments/assets/88de42a0-9777-4dc4-8e52-bfa91a643c9f)
 
-# Análise Geral do Sistema "Achados e Perdidos"
 
-Este sistema foi desenvolvido com o objetivo de facilitar o cadastro, a busca e a devolução de itens perdidos dentro da faculdade. A seguir, faço uma análise da interface com base nas principais teorias de fatores humanos, considerando aspectos como memorização, percepção e atenção.
+# Análise Geral do Sistema "PerdiAchei"
+
+Este sistema foi criado com o objetivo de facilitar o cadastro e a busca de itens perdidos ou encontrados no ambiente acadêmico. A seguir, apresento uma análise da interface com base nas teorias de fatores humanos, considerando aspectos de memorização, percepção visual (Gestalt) e cognição/atenção.
 
 ---
 
 ## 1. Memorização (Reconhecimento e Recordação)
 
-A interface foi pensada para priorizar o reconhecimento, reduzindo ao máximo a necessidade de o usuário lembrar o que fazer em cada etapa.
-
-- Ícones familiares como lupa (busca) e balão do WhatsApp (contato) facilitam o entendimento das ações.
-- Os botões seguem uma lógica de verbos no infinitivo (“Cadastrar Item”, “Ver Detalhes”), o que ajuda a entender rapidamente o propósito de cada ação.
-- Os campos de preenchimento, como telefone, já vêm com sugestões de formato, o que reduz dúvidas e erros.
+- O sistema favorece o reconhecimento com botões e rótulos claros como “Cadastrar Item” e “Ver Detalhes”.
+- O usuário não precisa memorizar etapas: o preenchimento dos campos é guiado com instruções simples.
+- A opção “Perdeu ou achou?” no formulário reduz ambiguidade e ajuda o sistema a categorizar melhor os itens.
+- As ações principais são visíveis e repetidas nas diferentes telas, reforçando o aprendizado pelo uso.
 
 ---
 
 ## 2. Percepção (Teoria da Gestalt)
 
-A estrutura da interface segue os princípios da Gestalt, o que torna a navegação mais intuitiva.
-
-- **Proximidade:** Itens relacionados estão agrupados (ex: nome, local, imagem e botão “Ver Detalhes”), facilitando a leitura.
-- **Semelhança:** Os cartões de itens seguem o mesmo padrão visual, o que ajuda o usuário a reconhecer rapidamente o conteúdo.
-- **Continuidade:** O fluxo da página principal até a visualização dos detalhes é linear e lógico.
-- **Figura-fundo:** O contraste entre áreas de conteúdo e o plano de fundo deixa claro o que é interativo.
+- **Proximidade:** Os filtros de busca e os cartões de itens estão bem agrupados, indicando claramente que pertencem ao mesmo contexto.
+- **Semelhança:** Todos os cartões seguem o mesmo padrão de apresentação, facilitando a leitura e comparação.
+- **Figura-fundo:** A separação entre o fundo da página e os blocos de conteúdo melhora a legibilidade.
+- **Continuidade:** O fluxo de navegação é natural: o usuário busca, visualiza e, se necessário, entra em contato com quem encontrou o item.
+- **Fechamento:** Os elementos são apresentados em caixas bem definidas, o que melhora a percepção de organização.
 
 ---
 
 ## 3. Cognição e Atenção
 
-A interface foi construída de forma a guiar o usuário de maneira natural, destacando as informações mais importantes.
-
-- Títulos como “Itens Perdidos” e “Cadastrar Item Perdido” estão em destaque, o que ajuda a localizar rapidamente onde estamos.
-- Os botões de ação estão em locais esperados (parte inferior direita dos formulários), seguindo o padrão de outras interfaces.
-- A hierarquia visual é clara: textos maiores chamam mais atenção e guiam o fluxo da leitura.
+- **Hierarquia visual clara:** Títulos em destaque guiam o olhar do usuário de forma natural.
+- **Posição dos botões:** Ações como “Cadastrar Item” estão em locais visíveis e com contraste adequado.
+- **Elementos importantes em destaque:** O botão do WhatsApp aparece com cor verde e ícone, chamando atenção para a ação principal após localizar o item.
+- **Distribuição do conteúdo:** A interface é simples, objetiva e sem distrações, facilitando o foco nas tarefas principais.
 
 ---
 
 ## Pontos Positivos
 
-- Navegação simples e direta.
-- Interface limpa, com boa distribuição do conteúdo.
-- Consistência visual em botões e cartões.
-- Feedback visual no preenchimento de campos, com instruções claras.
-- Boa separação entre blocos de conteúdo, evitando confusão.
+- Interface limpa, com boa separação entre áreas.
+- Navegação simples: filtro > lista > detalhes.
+- Elementos visuais consistentes.
+- Uso de cores e ícones para guiar o usuário.
+- Cadastro rápido e funcional.
 
 ---
 
 ## Conclusão
 
-O sistema utiliza bem os princípios de fatores humanos no design da interface. As decisões visuais e estruturais ajudam a tornar a navegação fácil, mesmo para usuários que não têm familiaridade com esse tipo de sistema. A combinação entre reconhecimento, organização visual intuitiva e foco nas ações principais melhora bastante a experiência de uso.
+A interface do sistema "PerdiAchei" aplica bem os princípios de design centrado no usuário. O equilíbrio entre reconhecimento, organização visual e atenção permite que qualquer pessoa consiga utilizar o sistema de forma simples, mesmo em um momento de estresse como a perda de um objeto.
+
+
+
